@@ -25,31 +25,46 @@
       </nav>
     </header>
 
-      <section id="home">
-        <h2>Welcome to MLNB ACADEMY</h2>
-        <p>
-          Providing top-notch beauty education and services to help you achieve
-          your beauty goals.
-        </p>
-        <div class="banner">
-          <img src="Image_3/MyLashCertifs.webp" alt="Banner" />
+    <section id="home">
+      <h2>Welcome to MLNB ACADEMY</h2>
+      <p>
+        Providing top-notch beauty education and services to help you achieve
+        your beauty goals.
+      </p>
+
+      <p>
+        Welcome to MLNB Academy, where beauty meets excellence. Our team of
+        skilled professionals is dedicated to providing top-notch services in a
+        relaxing and welcoming environment. Whether you're looking for a fresh
+        manicure, lash extensions, or brow shaping, we have you covered. Come
+        experience the MLNB difference!
+      </p>
+      <div class="banner">
+        <img src="Image_3/MyLashCertifs.webp" alt="Banner" />
+      </div>
+      <h2>
+        "Ready to pamper yourself? Schedule your appointment today and discover
+        why MLNB Academy is the top choice for beauty services.
+        <a href="https://www.vagaro.com/mlnbacademy" target="_blank"
+          >Click here to book now!</a
+        >"
+      </h2>
+
+      <!-- Photo Slideshow -->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="Image_2/Lashes.jpg" style="width: 100%" alt="Slide 1" />
         </div>
-
-        <a href="https://www.vagaro.com/mlnbacademy" target="_blank">Appointment? Click here!</a>
-
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-      </section>
-    </div>
+        <div class="mySlides fade">
+          <img src="Image_2/Lips.jpg" style="width: 100%" alt="Slide 2" />
+        </div>
+        <div class="mySlides fade">
+          <img src="Image_2/red nails.jpg" style="width: 100%" alt="Slide 3" />
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
 
     <footer>
       <p>Follow us on social media</p>
@@ -63,5 +78,28 @@
         &copy; 2024 My Lash & Brows Academy | All Rights Reserved
       </p>
     </footer>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+      }
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+    </script>
   </body>
 </html>
